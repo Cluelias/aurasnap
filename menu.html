@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraSnap Booth | Menu</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="text-center py-10">
+        <!-- insert logo here-->
+        <h1 class="text-4xl font-bold">Welcome to AuraSnap Booth!</h1>
+        <p class="mt-2 text-gray-600">To start, please select a themes</p>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl px-6">
+
+            <!-- Take photo -->
+             <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4">Take a Photo</h2>
+                <p class="text-gray-600 mb-6">
+                    Use your camera to take 3 photos in the photobooth
+                </p>
+
+                <button
+                    onclick="goToCamera()"
+                    class="w-full py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
+                    Start Camera
+                </button>
+             </div>
+            <!-- Upload Photo -->
+            <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4">Upload a Photo</h2>
+                <p class="text-gray-600 mb-6">
+                    Upload an existing photo from your device
+                </p>
+                <button
+                    onclick="uploadPhoto()"
+                    class="w-full py-3 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 transition">
+                    Upload Photo
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-- Footer / Navigation -->
+    <footer class="text-center py-6">
+        <button
+            onclick="goHome()"
+            class="text-gray-500 hover:text-black underline">
+            ← Back to Home
+        </button>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+        ensureThemeSelected();
+    </script>
+</body>
+</html>

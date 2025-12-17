@@ -6,7 +6,7 @@ const THEME_KEY = "aurasnap_theme";
 
 /**
  * Save selected theme and go to menu page
- * @param {string} theme - anime | pixel | botanical
+ * @param {string} theme - cyberpunk | pixel | botanical
  */
 function selectTheme(theme) {
   if (!theme) return;
@@ -18,10 +18,7 @@ function selectTheme(theme) {
   window.location.href = "menu.html";
 }
 
-/**
- * Get currently selected theme
- * Can be used in other pages if needed
- */
+// Get currently selected theme
 function getSelectedTheme() {
   return localStorage.getItem(THEME_KEY);
 }

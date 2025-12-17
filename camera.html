@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center">
+    <div class="relative w-full h-64 rounded-lg overflow-hidden mb-3">
+  
+        <!-- Background Image -->
+        <img 
+            src="assets/backgrounds/photobooth-bg.png" 
+            class="absolute inset-0 w-full h-full object-cover" 
+            alt="Background">
+
+        <!-- Video -->
+        <video
+            id="video"
+            autoplay
+            playsinline
+            class="w-full h-full object-cover -scale-x-100"
+        ></video>
+
+        <!-- Countdown -->
+        <div
+            id="countdown"
+            class="absolute inset-0 flex items-center justify-center text-white text-5xl font-bold bg-black/40 hidden"
+        >
+            3
+        </div>
+    </div>
+
+    <!-- Captured Slots -->
+    <div class="flex gap-2 mb-3">
+      <div class="capture-slot"></div>
+      <div class="capture-slot"></div>
+      <div class="capture-slot"></div>
+    </div>
+
+    <!-- Capture Button -->
+    <button
+      id="captureBtn"
+      class="w-full bg-black text-white py-2 rounded-lg"
+    >
+      Capture
+    </button>
+
+  </div>
+
+  <script src="js/camera.js"></script>
+
+</body>
+</html>
